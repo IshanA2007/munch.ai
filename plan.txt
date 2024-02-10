@@ -1,1 +1,2 @@
-api key for nutritionix: 4a0a944f
+app id for nutritionix: 4a0a944f
+api key for nutritionix: adb35788f38d5d1c39b79ceaf560497f—
