@@ -1,0 +1,22 @@
+<!-- text_input.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Text Input Form</title>
+</head>
+
+<body>
+    <h2>Enter Text</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    {% if result %}
+    <h2>Result</h2>
+    <p>{{ result }}</p>
+    {% endif %}
+</body>
+
+</html>

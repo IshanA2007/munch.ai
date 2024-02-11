@@ -1,12 +1,303 @@
-<!-- main/templates/main/home.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+
     <title>Home Page</title>
+    <style>
+        .navbar {
+            justify-content: center;
+            position: fixed !important;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            /* Semi-transparent background */
+            backdrop-filter: blur(10px);
+            /* Adjust the px value to control the blur intensity */
+            border-bottom: 1px #1e1e1e solid;
+        }
+
+        .navbar-brand {
+            font-size: 10px;
+        }
+
+        .custom-bg-color {
+            /* background-color: #0D0D0D; */
+            background-color: rgba(13, 13, 13, 0.5);
+        }
+
+        .body-color {
+            background: #0D0D0D;
+        }
+
+        .navbar-nav {
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #171717;
+            border-radius: 20px;
+        }
+
+        .nav-item {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        .nav-link {
+            color: #CCCCCC;
+        }
+
+        .hero-section {
+            text-align: center;
+            color: white;
+            padding: 50px 0;
+        }
+
+        .hero-title {
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 20px;
+            font-weight: 900;
+            font-size: 5rem;
+
+        }
+
+        .hero-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+        }
+
+        .about-section {
+            text-align: center;
+
+        }
+
+        .about-subtitle {
+            color: #DDFF00;
+            font-size: 18px;
+            font-family: "Inter", sans-serif;
+            text-align: center;
+
+        }
+
+        .about-text {
+
+            font-family: "Poppins", sans-serif;
+
+            font-size: 44px;
+            color: #4D4D4D;
+            width: 50%
+        }
+
+        .navbar-nav {
+            justify-content: center;
+            border: 2px solid #222222;
+            max-width: 600px;
+            /* Adjust based on your needs */
+            margin: 0 auto;
+
+        }
+
+        .container {
+            height: fit-content;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .perks-container {
+            width: 75%;
+            margin: 0 auto;
+            /* Center the container */
+        }
+
+        .perks {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+
+        }
+
+        .perk {
+            flex: 1;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 0 10px;
+            text-align: center;
+            border: 2px solid #222222;
+            background: linear-gradient(to bottom, #1e1e1e, #141414);
+        }
+
+        .perk-title {
+            font-size: 26px;
+            color: #CCCCCC;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .feature-text {
+            color: #797979;
+            width: 50%;
+            font-size: 36px;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .perk-descrip {
+            color: #7a7a7a;
+            font-size: 20px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .ingredients-redirect {
+            color: #DDFF00;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: "Inter", sans-serif;
+            text-align: center;
+        }
+
+        .ingredients-redirect:hover {
+            text-decoration: underline;
+            font-size: 18px;
+            font-family: "Inter", sans-serif;
+            text-align: center;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
 </head>
-<body>
-    <h1>Welcome to our website!</h1>
-    <!-- Add your content here -->
+
+<body class="body-color">
+    <br>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-bg-color">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ingredients/">Ingredients</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="recipes/">Recipes</a>
+            </li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container2">
+            <h1 class="hero-title">Munch.<span style="color: purple">ai</span></h1>
+            <p class="hero-subtitle">A platform for food enthusiasts.</p>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- About Section -->
+    <section class="about-section">
+        <h2 class="about-subtitle">INTRODUCING MUNCH</h2>
+        <div class="container">
+            <p class="about-text"><span style="color: #CCCCCC">Tracking your meals is hard.</span> You don't have the
+                time to manually figure out the nutrition of every ingredient for every meal. <span
+                    style="color: #CCCCCC">That's where Munch.ai
+                    comes in.</span></p>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- Ingredients Section -->
+    <section class="about-section">
+        <h2 class="about-subtitle">INGREDIENTS IN. NUTRITION OUT.</h2>
+        <div class="container">
+            <p class="feature-text"><span style="color: #CCCCCC">Quick, easy, and accurate nutrition insights.</span>
+                Simply input your ingredients and their quantities, and instantly get the total calories, carbs, fat,
+                and protein of your meal.</p>
+        </div>
+        <div class="perks-container">
+
+            <div class="perks">
+                <div class="perk">
+                    <p class="perk-title">Convenience</p>
+                    <p class="perk-descrip">Save your valuable time and stop searching each ingredient individually
+                        online. Simply input your ingredients and instantly receive relevant nutritional information.
+                    </p>
+                </div>
+                <div class="perk">
+                    <p class="perk-title">Accuracy</p>
+                    <p class="perk-descrip">Rely on untrustworthy websites no longer. Munch.ai utilizes Natural Language
+                        Processing techniques to ensure you receive the most accurate nutritional data possible.</p>
+                </div>
+                <div class="perk">
+                    <p class="perk-title">Action</p>
+                    <p class="perk-descrip">Get instantaneous advice on your nutritional choices. Munch.ai gives you
+                        personalized feedback and suggestions on your meals and pprovides new
+                        ways to cut costs.</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <a href="ingredients/" class="ingredients-redirect">Check it out ></a>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- Recipes Section -->
+    <section class="about-section">
+        <h2 class="about-subtitle">A PICTURE IS WORTH A THOUSAND WORDS</h2>
+        <div class="container">
+            <p class="feature-text"><span style="color: #CCCCCC">One picture is all it takes.</span>
+                Take a quick photo or screenshot of any recipe, and our image processing AI will provide you relevant
+                caloric and macro information.</p>
+        </div>
+        <div class="perks-container">
+
+            <div class="perks">
+                <div class="perk">
+                    <p class="perk-title">Convenience</p>
+                    <p class="perk-descrip">Save your valuable time and stop searching each ingredient individually
+                        online. Simply input your ingredients and instantly receive relevant nutritional information.
+                    </p>
+                </div>
+                <div class="perk">
+                    <p class="perk-title">Accuracy</p>
+                    <p class="perk-descrip">Rely on untrustworthy websites no longer. Munch.ai utilizes Natural Language
+                        Processing techniques to ensure you receive the most accurate nutritional data possible.</p>
+                </div>
+                <div class="perk">
+                    <p class="perk-title">Action</p>
+                    <p class="perk-descrip">Get instantaneous advice on your nutritional choices. Munch.ai gives you
+                        personalized feedback and suggestions on your meals and pprovides new
+                        ways to cut costs.</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <a href="ingredients/" class="ingredients-redirect">Check it out ></a>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>
