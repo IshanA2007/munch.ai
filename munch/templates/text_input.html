@@ -4,19 +4,363 @@
 
 <head>
     <title>Text Input Form</title>
+    <style>
+        .navbar {
+            justify-content: center;
+            position: fixed !important;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            /* Semi-transparent background */
+            backdrop-filter: blur(10px);
+            /* Adjust the px value to control the blur intensity */
+            border-bottom: 1px #1e1e1e solid;
+        }
+
+        .navbar-brand {
+            font-size: 10px;
+        }
+
+        .custom-bg-color {
+            /* background-color: #0D0D0D; */
+            background-color: rgba(13, 13, 13, 0.5);
+        }
+
+        .body-color {
+            background: #0D0D0D;
+        }
+
+        .navbar-nav {
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #171717;
+            border-radius: 20px;
+        }
+
+        .nav-item {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        .nav-link {
+            color: #CCCCCC;
+        }
+
+        .hero-section {
+            text-align: center;
+            color: white;
+            padding: 50px 0;
+        }
+
+        .hero-title {
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 20px;
+            font-weight: 900;
+            font-size: 5rem;
+
+        }
+
+        .hero-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: #7D7F78;
+        }
+
+        .about-section {
+            text-align: center;
+
+        }
+
+        .about-subtitle {
+            color: #DDFF00;
+            font-size: 18px;
+            font-family: "Inter", sans-serif;
+            text-align: center;
+
+        }
+
+        .about-text {
+
+            font-family: "Poppins", sans-serif;
+
+            font-size: 44px;
+            color: #4D4D4D;
+            width: 50%
+        }
+
+        .navbar-nav {
+            justify-content: center;
+            border: 2px solid #222222;
+            max-width: 600px;
+            /* Adjust based on your needs */
+            margin: 0 auto;
+
+        }
+
+        .container {
+            height: fit-content;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .perks-container {
+            width: 75%;
+            margin: 0 auto;
+            /* Center the container */
+        }
+
+        .perks {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+
+        }
+
+        .perk {
+            flex: 1;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 0 10px;
+            text-align: center;
+            border: 2px solid #222222;
+            background: linear-gradient(to bottom, #1e1e1e, #141414);
+            text-shadow: 1px 1px 2px #000000;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .perk:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .perk-title {
+            font-size: 26px;
+            color: #CCCCCC;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .feature-text {
+            color: #797979;
+            width: 50%;
+            font-size: 36px;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .perk-descrip {
+            color: #7a7a7a;
+            font-size: 20px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .ingredients-redirect {
+            color: #DDFF00;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            font-family: "Inter", sans-serif;
+            text-align: center;
+
+        }
+
+        .ingredients-redirect:hover {
+
+            font-size: 18px;
+            font-family: "Inter", sans-serif;
+            text-align: center;
+            box-shadow: 0 0 6px #CCCCCC;
+            border-radius: 10px;
+        }
+
+        .footer {
+            background-color: #0D0D0D;
+            padding: 20px 0;
+            text-align: center;
+            color: #CCCCCC;
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+            border-top: 1px #1e1e1e solid;
+        }
+
+        .form-textbox-control {
+            background-color: #1e1e1e !important;
+            border: 2px solid #222222 !important;
+            color: #CCCCCC;
+            width: 1000px !important;
+            height: 300px !important;
+            border-radius: 10px;
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            /* Aligns items vertically */
+            justify-content: center;
+            /* Centers items along the main axis (now vertical) */
+            align-items: center;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <h2>Enter Text</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Submit</button>
-    </form>
+<body class="body-color">
+    <br>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-bg-color">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="../#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Ingredients</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../recipes">Recipes</a>
+            </li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <section class="hero-section">
+        <div class="container2">
+            <h1 class="hero-title">INGREDIENTS <span style="color: #4D4D4D">IN.</span> </h1>
+            <h1 class="hero-title">NUTRITION <span style="color: #4D4D4D">OUT.</span></h1>
+        </div>
+
+        <p class="hero-subtitle"><span style="color: #CCCCCC">Quick, easy, and accurate nutrition insights.</span></p>
+        <p class="hero-subtitle">Simply input your ingredients and their quantities, and</p>
+        <p class="hero-subtitle">instantly get the total calories, carbs, fat,
+            and protein of your meal.</p>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- How to Use Section -->
+    <section class="about-section" id="about">
+        <h2 class="about-subtitle">TWO SIMPLE STEPS</h2>
+        <!-- Ingredients Section -->
+
+        <div class="perks-container">
+
+            <div class="perks">
+                <div class="perk">
+                    <p class="perk-title">Step 1</p>
+                    <p class="perk-descrip">Enter a list of ingredients and quantities in the box, in any format you'd
+                        like.
+                    </p>
+                </div>
+                <div class="perk">
+                    <p class="perk-title">Step 2</p>
+                    <p class="perk-descrip">Press the button, and get an instant display of the total calories, carbs,
+                        fat, and protein!</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2 class="about-subtitle">INSERT INGREDIENTS</h2>
+    <div class="form-container">
+        <form class="form" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-dark">Submit</button>
+        </form>
+    </div>
+
+    <!-- Results Section-->
     {% if result %}
-    <h2>Result</h2>
-    <p>{{ result }}</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section class="about-section" id="results">
+        <h2 class="about-subtitle">NUTRITION MADE SIMPLE</h2>
+        <!-- Ingredients Section -->
+
+        <div class="perks-container">
+
+            <div class="perks">
+                <div class="perk">
+                    <p class="perk-title">Calories</p>
+                    <p class="perk-descrip">{{cals}} cal
+                    </p>
+                </div>
+                <div class="perk">
+                    <p class="perk-title">Protein</p>
+                    <p class="perk-descrip">{{protein}} grams</p>
+                </div>
+                <div class="perk">
+                    <p class="perk-title">Carbohydrates</p>
+                    <p class="perk-descrip">{{carbs}} grams</p>
+                </div>
+                <div class="perk">
+                    <p class="perk-title">Fats</p>
+                    <p class="perk-descrip">{{fats}} grams</p>
+                </div>
+                <div class="perk">
+                    <p class="perk-title">Sugars</p>
+                    <p class="perk-descrip">{{sugars}} grams</p>
+                </div>
+            </div>
+        </div>
+    </section>
     {% endif %}
+    <br>
+    <br>
+    <br>
+    <br>
+    {%if rec%}
+    <div class="perks-container">
+
+        <div class="perks">
+            <div class="perk">
+                <p class="perk-title">Recommendation</p>
+                <p class="perk-descrip">{{rec}}
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="footer">
+        &copy; Made 4 Phoenix Hackathon by Ishan Ajwani and Logan Bradley
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
+
 
 </html>

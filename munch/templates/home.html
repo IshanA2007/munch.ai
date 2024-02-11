@@ -55,18 +55,29 @@
             color: white;
             padding: 50px 0;
         }
-
+        @keyframes bob {
+        0%, 100% {
+        transform: translateY(10px);
+        }
+        50% {
+        transform: translateY(-10px);
+        }
+        }
+        .hero-title {
+            animation: bob 3s ease-in-out infinite;
+            display: inline-block;
+        }
         .hero-title {
             font-family: 'Poppins', sans-serif;
             margin-bottom: 20px;
             font-weight: 900;
-            font-size: 5rem;
+            font-size: 7rem;
 
         }
 
         .hero-subtitle {
             font-family: 'Inter', sans-serif;
-            font-size: 1rem;
+            font-size: 2rem;
         }
 
         .about-section {
@@ -128,6 +139,13 @@
             text-align: center;
             border: 2px solid #222222;
             background: linear-gradient(to bottom, #1e1e1e, #141414);
+            text-shadow: 1px 1px 2px #000000;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .perk:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.15);
         }
 
         .perk-title {
@@ -153,15 +171,29 @@
             color: #DDFF00;
             text-decoration: none;
             font-size: 18px;
+            padding: 10px 20px;
             font-family: "Inter", sans-serif;
             text-align: center;
+
         }
 
         .ingredients-redirect:hover {
-            text-decoration: underline;
+
             font-size: 18px;
             font-family: "Inter", sans-serif;
             text-align: center;
+            box-shadow: 0 0 6px #CCCCCC;
+            border-radius: 10px;
+        }
+
+        .footer {
+            background-color: #0D0D0D;
+            padding: 20px 0;
+            text-align: center;
+            color: #CCCCCC;
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+            border-top: 1px #1e1e1e solid;
         }
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -179,10 +211,13 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="ingredients/">Ingredients</a>
+                <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="recipes/">Recipes</a>
+                <a class="nav-link" href="#ingredients">Ingredients</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#recipes">Recipes</a>
             </li>
         </ul>
     </nav>
@@ -192,8 +227,8 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container2">
-            <h1 class="hero-title">Munch.<span style="color: purple">ai</span></h1>
-            <p class="hero-subtitle">A platform for food enthusiasts.</p>
+            <h1 class="hero-title">Munch<span style="color: #4D4D4D">.ai</span></h1>
+            <p class="hero-subtitle"><span style="color: #797979">Change your diet.</span> Change your life.</p>
         </div>
     </section>
     <br>
@@ -203,10 +238,11 @@
     <br>
     <br>
     <!-- About Section -->
-    <section class="about-section">
+    <section class=" about-section" id="about">
         <h2 class="about-subtitle">INTRODUCING MUNCH</h2>
         <div class="container">
-            <p class="about-text"><span style="color: #CCCCCC">Tracking your meals is hard.</span> You don't have the
+            <p class="about-text"><span style="color: #CCCCCC">Tracking your meals is hard.</span> You don't
+                have the
                 time to manually figure out the nutrition of every ingredient for every meal. <span
                     style="color: #CCCCCC">That's where Munch.ai
                     comes in.</span></p>
@@ -219,7 +255,7 @@
     <br>
     <br>
     <!-- Ingredients Section -->
-    <section class="about-section">
+    <section class="about-section" id="ingredients">
         <h2 class="about-subtitle">INGREDIENTS IN. NUTRITION OUT.</h2>
         <div class="container">
             <p class="feature-text"><span style="color: #CCCCCC">Quick, easy, and accurate nutrition insights.</span>
@@ -243,7 +279,7 @@
                 <div class="perk">
                     <p class="perk-title">Action</p>
                     <p class="perk-descrip">Get instantaneous advice on your nutritional choices. Munch.ai gives you
-                        personalized feedback and suggestions on your meals and pprovides new
+                        personalized feedback and suggestions on your meals and provides new
                         ways to cut costs.</p>
                 </div>
             </div>
@@ -259,7 +295,7 @@
     <br>
     <br>
     <!-- Recipes Section -->
-    <section class="about-section">
+    <section class="about-section" id="recipes">
         <h2 class="about-subtitle">A PICTURE IS WORTH A THOUSAND WORDS</h2>
         <div class="container">
             <p class="feature-text"><span style="color: #CCCCCC">One picture is all it takes.</span>
@@ -272,26 +308,33 @@
                 <div class="perk">
                     <p class="perk-title">Convenience</p>
                     <p class="perk-descrip">Save your valuable time and stop searching each ingredient individually
-                        online. Simply input your ingredients and instantly receive relevant nutritional information.
+                        online. With only one picture get all the nutritional info you need.
                     </p>
                 </div>
                 <div class="perk">
                     <p class="perk-title">Accuracy</p>
-                    <p class="perk-descrip">Rely on untrustworthy websites no longer. Munch.ai utilizes Natural Language
-                        Processing techniques to ensure you receive the most accurate nutritional data possible.</p>
+                    <p class="perk-descrip">Rely on untrustworthy websites no longer. Munch.ai utilizes modern Computer
+                        Vision techniques to ensure you receive the most accurate nutritional data possible.</p>
                 </div>
                 <div class="perk">
                     <p class="perk-title">Action</p>
                     <p class="perk-descrip">Get instantaneous advice on your nutritional choices. Munch.ai gives you
-                        personalized feedback and suggestions on your meals and pprovides new
+                        personalized feedback and suggestions on your meals and provides new
                         ways to cut costs.</p>
                 </div>
             </div>
         </div>
         <br>
         <br>
-        <a href="ingredients/" class="ingredients-redirect">Check it out ></a>
+        <a href="recipes/" class="ingredients-redirect">Check it out ></a>
     </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="footer">
+        &copy; Made 4 Phoenix Hackathon by Ishan Ajwani and Logan Bradley
+    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
