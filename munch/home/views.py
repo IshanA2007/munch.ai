@@ -29,7 +29,7 @@ class SubmitView(View):
             result = None
         return render(
             request,
-            "upload.html",
+            "text_input.html",
             {
                 "form": form,
                 "result": result,
