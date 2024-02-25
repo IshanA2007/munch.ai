@@ -1,5 +1,5 @@
-# munch.ai
-change this
+## Munch.ai
+
 
 # Project Inspiration
 There are two things humans need to survive: food and water. Food is one of the most basic necessities, yet powers every part of our lives on the daily. So why are hundreds of millions around the world malnourished, slowly depleting the precious resources required to sustain their body? One of the biggest causes of this malnourishment is simply unhealthy eating. In fact, the members at FishyBusiness Incorporated struggled in the past with their diets, whether it be eating too much or too little. Thus, we decided it was time to make Munch.ai, the app that aims to make eating healthy simple. After all, as we at FBI say, a better diet is a better life.
