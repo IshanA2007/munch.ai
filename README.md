@@ -1,17 +1,68 @@
-## Munch.ai
+# 🥗 Munch.ai
 
+## 📌 Overview
+**Munch.ai** is a nutrition-focused web application designed to help users eat healthier by generating calorie-conscious recipes and macro insights based on uploaded ingredient lists or scanned recipes. It leverages AI and nutrition APIs to simplify healthy eating for everyone.
 
-# Project Inspiration
-There are two things humans need to survive: food and water. Food is one of the most basic necessities, yet powers every part of our lives on the daily. So why are hundreds of millions around the world malnourished, slowly depleting the precious resources required to sustain their body? One of the biggest causes of this malnourishment is simply unhealthy eating. In fact, the members at FishyBusiness Incorporated struggled in the past with their diets, whether it be eating too much or too little. Thus, we decided it was time to make Munch.ai, the app that aims to make eating healthy simple. After all, as we at FBI say, a better diet is a better life.
+---
 
-# What It Does
-Our cutting-edge, highly aesthetic app, Munch.ai, provides numerous features that aim to increase the convenience and efficiency of maintaining a healthy diet by offering quick ways to track macros and calories, while also providing personalized feedback to the user. Using turn-of-the-century image processing models, we offer the ability to get all the nutritional information necessary in two simple steps: first, take a picture of your online or printed recipe and second, click the submit button and await your personalized Munchvice. We also offer a web app to type a list of ingredients, and utilize LLM models trained specifically for nutrition to provide the user with highly accurate information. Our advice is also highly reliable, and harnesses language models constructed with over 1.7 trillion nodes. Overall, with its astounding convenience, aesthetic design, and potential to change lives, Munch.ai is the perfect choice for anyone looking to grow.
+## 🚀 Features
+- ✅ Upload a recipe photo and get calorie and macro breakdowns using computer vision  
+- ✅ Input ingredients manually and receive healthy, AI-curated recipe suggestions  
+- ✅ Personalized nutrition advice powered by language models and APIs  
+- ✅ Clean, minimalistic interface built for clarity and ease-of-use
 
-# How Was It Built
-Because FishyBusiness Incorporated is a highly organized and professional company, the project was split up between the front-end team and the back-end team. The front-end team decided to tackle the challenge by using Django, a framework that allowed back-end (which was rooted in Python) to be easily integrated. The front-end team also spent numerous hours meticulously hand-crafting the aesthetics of the web app, going for a sleek and modern feel. While the front-end did their thing, the back-end handled the AI and CV models which would be used to provide advice and scan nutritional information. The back-end team harnessed several pretrained models along with processing data from the models to ensure seamless connection between the back-end and the front-end. Some of the models used included the gpt-4-vision model (a CV model) and the nutrionix API which allowed for accurate nutritional information. Together, the front-end and back-end teams worked tirelessly to ensure a pleasant and helpful user experience, so that FBI can pursue its goal of changing the world.
+---
 
-# Challenges
-FishyBusiness Incorporated faced numerous challenges when developing its novel product, Munch.ai. However, with the power of friendship and determination, all hurdles were overcome and the app was deemed successful. The main challenge faced as acquiring nutritional information given a string-representation of a recipe. At first, the team attempted to fine-tune a GPT2 model with a custom dataset to enhance its performance and tailor it to the relevant applications, but this proved to be far too inaccurate for our needs. Thus, we decided to partner with Nutritionix and utilize their API to ensure that we are providing our users with the most reliable data possible. Another challenge we faced was making an aesthetic design for the website. We knew that an outstanding idea like ours needed an outstanding website, but that was far easier said than done. We did not want to use a pre-made template, and opted for a novel layout. We faced many setbacks navigating the annoyances of CSS and the absurdities of centering a div, but in the end the FBI team was proud of what they created. 
+## 🛠️ Technologies Used
 
-# Accomplishments
-Despite the hardships the FBI team faced when developing the revolutionary app, Munch.ai, we made several accomplishments we were very proud of. Firstly, we are very proud of our minimalistic but functional backend, which avoids the convolution and chaos that can be present in many large applications. We took every step to ensure that our code was as concise as possible while offering the user the full potential of Munch.ai. The team is also very proud of our website design. Despite being completely new to HTML and CSS designing and facing countless challenges fighting the random problems with CSS, we were able to produce a functional website that was unique and aesthetic. The FBI team, by using teamwork and collaboration, was able to overcome all the challenges presented, and reach new heights.
+| Area            | Stack/Tools                                           |
+|-----------------|-------------------------------------------------------|
+| Backend         | Python, Django                                        |
+| Frontend        | HTML, CSS, JavaScript                                 |
+| AI / ML         | GPT-4 Vision, Nutritionix API                         |
+| Image Handling  | OpenCV, PIL                                           |
+| Hosting         | PythonAnywhere / Railway / Vercel / Custom Server     |
+| Other Tools     | Git, Figma, Postman, Canva                            |
+
+---
+
+## 👨‍💻 My Role
+
+- Designed and implemented the Django backend for ingredient processing  
+- Integrated GPT-4 Vision and Nutritionix API for nutrition analysis  
+- Collaborated on UI/UX design to ensure an intuitive, aesthetic frontend  
+- Ensured app responsiveness and optimized performance across devices  
+
+---
+
+## 📷 Screenshots
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="home.png" width="1000" alt="Dashboard screenshot" /><br/>
+    </td>
+    <td align="center">
+      <img src="ingredients.png" width="1000" alt="Gradebook screenshot" /><br/>
+    </td>
+  </tr>
+</table>
+
+---
+
+## 🧪 How to Run Locally
+
+```bash
+# Clone repo
+git clone https://github.com/IshanA2007/munch-ai.git
+cd munch-ai
+
+# Create virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run Django server
+python manage.py runserver
