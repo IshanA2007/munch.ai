@@ -40,10 +40,10 @@
 <table>
   <tr>
     <td align="center">
-      <img src="home.png" width="1000" alt="Dashboard screenshot" /><br/>
+      <img src="homepage.jpg" width="1000" alt="Dashboard screenshot" /><br/>
     </td>
     <td align="center">
-      <img src="ingredients.png" width="1000" alt="Gradebook screenshot" /><br/>
+      <img src="ingredients.jpg" width="1000" alt="Gradebook screenshot" /><br/>
     </td>
   </tr>
 </table>
